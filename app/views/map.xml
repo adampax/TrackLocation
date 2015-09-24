@@ -1,0 +1,5 @@
+<Alloy>
+	<Window title='Map'>
+		<View id="mapview" module="ti.map" />
+	</Window>
+</Alloy>

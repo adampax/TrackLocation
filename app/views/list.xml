@@ -1,0 +1,16 @@
+<Alloy>
+	<Window>
+		<ListView id="listview" defaultItemTemplate="locations">
+			<Templates>
+				<ItemTemplate name="locations" height="70">
+					<Label bindId='time' class='time' />
+					<Label bindId="lat" class="lat"/>
+					<Label bindId="lng" class="lng"/>
+				</ItemTemplate>
+			</Templates>
+			<ListSection id="section" dataCollection="locations" dataTransform="doTransform">
+				<ListItem time:text="{time}" lat:text="{latitude}" lng:text="{longitude}"/>
+			</ListSection>
+		</ListView>
+	</Window>
+</Alloy>

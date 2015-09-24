@@ -1,0 +1,21 @@
+
+'Label': {
+	font:{
+		fontSize: 14
+	}
+}
+
+'.time': {
+	top: 2,
+	left: 10
+},
+
+'.lat': {
+	top:20,
+	left: 10
+},
+
+'.lng': {
+	top:40,
+	left: 10
+}
