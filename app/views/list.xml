@@ -1,5 +1,5 @@
 <Alloy>
-	<Window>
+	<Window title="List">
 		<ListView id="listview" defaultItemTemplate="locations">
 			<Templates>
 				<ItemTemplate name="locations" height="70">

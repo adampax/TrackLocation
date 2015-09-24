@@ -66,5 +66,4 @@
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>
-    <property name="appc-app-id" type="string">5603f344cdaec3350916d10f</property>
 </ti:app>

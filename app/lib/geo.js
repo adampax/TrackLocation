@@ -5,7 +5,6 @@ exports.startGeo = function(cb) {
 			if (e.error) {
 				alert('Error: ' + e.error);
 			} else {
-				//Ti.API.info(e.coords);
 				cb(e.coords);
 			}
 		});
@@ -16,12 +15,10 @@ exports.startGeo = function(cb) {
 
 exports.getLocation = function(cb){
 		if (Ti.Geolocation.locationServicesEnabled) {
-		//Ti.Geolocation.trackSignificantLocationChange = true;
 		Ti.Geolocation.getCurrentPosition(function(e) {
 			if (e.error) {
 				alert('Error: ' + e.error);
 			} else {
-				//Ti.API.info(e.coords);
 				cb(e.coords);
 			}
 		});
