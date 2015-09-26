@@ -21,6 +21,11 @@ locations.fetch({
 
 function addToMap(collection) {
 	var points = [];
+	
+	if(collection.length < 1){
+		console.log('no points saved');
+		return;
+	}
 
 	collection.each(function(model) {
 
