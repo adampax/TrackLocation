@@ -1,6 +1,16 @@
 var args = arguments[0] || {};
 var Map = require('ti.map');
 
+
+//open window on click
+function openSettings(){
+	var settingsWindow = Alloy.createController('settings').getView();
+	
+	settingsWindow.open();
+}
+	
+
+
 require('geo').getLocation(function(e) {
 	$.mapview.setRegion({
 		latitude : e.latitude,
