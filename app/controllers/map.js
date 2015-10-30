@@ -1,6 +1,14 @@
 var args = arguments[0] || {};
 var Map = require('ti.map');
 
+
+//open window on click
+function openSettings(){
+	alert("hello this is here");
+}
+	
+
+
 require('geo').getLocation(function(e) {
 	$.mapview.setRegion({
 		latitude : e.latitude,

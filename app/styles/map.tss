@@ -9,3 +9,6 @@
 	regionFit: true,
 	userLocation: true
 }
+'#settingsButton':{
+	title: "Settings"
+}

@@ -1,5 +1,7 @@
 <Alloy>
 	<Window title='Map'>
 		<View id="mapview" module="ti.map" />
+		
+		<RightNavButton id="settingsButton" onClick="openSettings" />
 	</Window>
 </Alloy>
