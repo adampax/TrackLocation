@@ -4,7 +4,9 @@ var Map = require('ti.map');
 
 //open window on click
 function openSettings(){
-	alert("hello this is here");
+	var settingsWindow = Alloy.createController('settings').getView();
+	
+	settingsWindow.open();
 }
 	
 
