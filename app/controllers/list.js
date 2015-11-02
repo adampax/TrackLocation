@@ -9,6 +9,7 @@ function doTransform(model) {
 		o.time = moment(o.time).format('MM/DD/YY - HH:mm:ss');
 	}
 	return o;
+	
 }
 locations.fetch();
 
@@ -20,8 +21,13 @@ function openDetail(e){
 	// Get the clicked item from that section
 	var item = section.getItemAt(e.itemIndex);
 	
+	var args = {
+        time: item.time,
+        lat: item.lat,
+        lng: item.lng
+    };
 	
-	 var detail = Alloy.createController('locationDetails').getView();
+	 var detail = Alloy.createController('locationDetails', args).getView();
 	 
 	 $.list.open(detail);
 }

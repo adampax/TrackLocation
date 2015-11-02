@@ -2,3 +2,21 @@
 ".container" : {
   
 }
+"#timeLabel": {
+    font: {
+        fontSize: '30'
+    },
+    left: '10'
+},
+"#latLabel": {
+    font: {
+        fontSize: '20'
+    },
+    left: '10'
+}
+"#lngLabel": {
+    font: {
+        fontSize: '20'
+    },
+    left: '10'
+}

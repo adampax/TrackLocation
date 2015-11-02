@@ -1,5 +1,9 @@
 <Alloy>
 	<Window class="container" title="Location Detail">
-		<View id="view" borderRadius="10" backgroundColor="red" width="50" height="50" />
+		<View layout='vertical'>
+			<Label id='timeLabel'></Label>
+			<Label id='latLabel'></Label>
+			<Label id='lngLabel'></Label>
+		</View>	
     </Window>
 </Alloy>
