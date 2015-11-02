@@ -1,9 +1,9 @@
 exports.definition = {
 	config: {
 		columns: {
-		    "latitude": "string",
-		    "longitude": "string",
-		    "time": "string"
+		    "latitude": "TEXT",
+		    "longitude": "TEXT",
+		    "time": "TEXT"
 		},
 		adapter: {
 			type: "sql",

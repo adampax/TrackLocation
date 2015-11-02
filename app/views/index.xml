@@ -3,8 +3,6 @@
 		<Tab title="Map" icon="KS_nav_ui.png">
 			<Require src='map'></Require>
 		</Tab>
-		<Tab title="List" icon="KS_nav_views.png">
-			<Require src='list'></Require>
-		</Tab>
+		<Require src='list' id='listTab'></Require>
 	</TabGroup>
 </Alloy>

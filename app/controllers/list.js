@@ -10,5 +10,19 @@ function doTransform(model) {
 	}
 	return o;
 }
-
 locations.fetch();
+
+//
+
+function openDetail(e){
+	// Get the section of the clicked item
+	var section = $.listview.sections[e.sectionIndex];
+	// Get the clicked item from that section
+	var item = section.getItemAt(e.itemIndex);
+	
+	
+	 var detail = Alloy.createController('locationDetails').getView();
+	 
+	 $.list.open(detail);
+}
+

@@ -1,8 +1,9 @@
 <Alloy>
-	<Window title="List">
-		<ListView id="listview" defaultItemTemplate="locations">
+	<Tab title="List" icon="KS_nav_views.png">
+	<Window id="listTab" title="Locations">
+		<ListView id="listview" onItemclick="openDetail" defaultItemTemplate="locations">
 			<Templates>
-				<ItemTemplate name="locations" height="70">
+				<ItemTemplate name="locations" height="200">
 					<Label bindId='time' class='time' />
 					<Label bindId="lat" class="lat"/>
 					<Label bindId="lng" class="lng"/>
@@ -10,7 +11,9 @@
 			</Templates>
 			<ListSection id="section" dataCollection="locations" dataTransform="doTransform">
 				<ListItem time:text="{time}" lat:text="{latitude}" lng:text="{longitude}"/>
+				
 			</ListSection>
 		</ListView>
 	</Window>
+ 	</Tab>
 </Alloy>

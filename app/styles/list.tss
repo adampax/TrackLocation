@@ -1,7 +1,7 @@
 
 'Label': {
 	font:{
-		fontSize: 14
+		fontSize: 20
 	}
 }
 

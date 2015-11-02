@@ -1,4 +1,5 @@
 <Alloy>
-	<Window>
-	</Window>
+    <Window title="Settings" modal="true" exitOnClose="true">
+        <Button onClick="rewind">Close</Button>
+    </Window>
 </Alloy>
