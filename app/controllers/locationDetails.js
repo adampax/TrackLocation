@@ -1,9 +1,10 @@
 var args = arguments[0] || {};
-
+var moment = require('alloy/moment');
 var location = Alloy.Collections.locations.at(args.index);
 
-console.log(location.toJSON());
+var timeText = location.get("time");
+timeText = moment(timeText).format('MM/DD/YY - HH:mm:ss');
 
 $.latData.text = location.get("latitude");
 $.lngData.text = "  " + location.get("longitude");
-$.timeData.text = location.get("time");
+$.timeData.text = timeText;

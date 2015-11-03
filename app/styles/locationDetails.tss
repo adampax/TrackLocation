@@ -13,7 +13,8 @@
 	font: {
 		fontWeight: 'bold'
 	},
-	backgroundColor: 'pink'
+	backgroundColor: 'pink',
+	right:25
 },
 
 '.dataLabel': {
