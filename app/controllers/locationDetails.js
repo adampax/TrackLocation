@@ -1,6 +1,9 @@
 var args = arguments[0] || {};
 
+var location = Alloy.Collections.locations.at(args.index);
 
-$.timeLabel.text = args.time || 'Default time';
-$.latLabel.text = args.lat || 'Default lat'; 
-$.lngLabel.text = args.lng || 'Default lng';
+console.log(location.toJSON());
+
+$.latData.text = location.get("latitude");
+$.lngData.text = "  " + location.get("longitude");
+$.timeData.text = location.get("time");

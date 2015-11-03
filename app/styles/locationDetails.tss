@@ -1,22 +1,45 @@
-
-".container" : {
-  
+"#locDetails":{
+	layout: 'vertical',
+	backgroundColor: '#0000FF'
 }
+
+'Label': {
+	font: {
+		fontSize: '20'
+	}
+}
+
+'.titleLabel': {
+	font: {
+		fontWeight: 'bold'
+	},
+	backgroundColor: 'pink'
+},
+
+'.dataLabel': {
+	left:100,
+    
+}
+
 "#timeLabel": {
-    font: {
-        fontSize: '30'
-    },
-    left: '10'
+
+	top: '25',
+	left: '10'
+},
+"#timeData": {
+	top: '-25'
 },
 "#latLabel": {
-    font: {
-        fontSize: '20'
-    },
-    left: '10'
+	top: '60',
+	left: '10'
 }
+"#latData": {
+	top: '-23'
+},
 "#lngLabel": {
-    font: {
-        fontSize: '20'
-    },
-    left: '10'
+	top: '60',
+	left: '10'
+},
+"#lngData": {
+	top: '-23'
 }

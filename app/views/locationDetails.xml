@@ -1,9 +1,12 @@
 <Alloy>
-	<Window class="container" title="Location Detail">
-		<View layout='vertical'>
-			<Label id='timeLabel'></Label>
-			<Label id='latLabel'></Label>
-			<Label id='lngLabel'></Label>
+	<Window title="Location Detail">
+		<View id="locDetails">
+			<Label class="titleLabel" id='timeLabel'>Time: </Label>
+			<Label class='dataLabel' id='timeData'></Label>
+			<Label class="titleLabel" id='latLabel'>Latitude: </Label>
+			<Label class='dataLabel' id='latData'></Label>
+			<Label class="titleLabel" id='lngLabel'>Longitude: </Label>
+			<Label class='dataLabel' id='lngData'></Label>
 		</View>	
     </Window>
 </Alloy>

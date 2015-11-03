@@ -16,16 +16,16 @@ locations.fetch();
 //
 
 function openDetail(e){
+	console.log(JSON.stringify(e));
 	// Get the section of the clicked item
 	var section = $.listview.sections[e.sectionIndex];
 	// Get the clicked item from that section
 	var item = section.getItemAt(e.itemIndex);
-	
+	console.log(JSON.stringify(item));
 	var args = {
-        time: item.time,
-        lat: item.lat,
-        lng: item.lng
+        index: e.itemIndex
     };
+    
 	
 	 var detail = Alloy.createController('locationDetails', args).getView();
 	 
