@@ -1,9 +1,9 @@
 <Alloy>
 	<TabGroup>
-		<Tab title="Map" icon="KS_nav_ui.png">
+		<Tab title="Map" id='mapTab'>
 			<Require src='map'></Require>
 		</Tab>
-		<Tab title="List" icon="KS_nav_views.png">
+		<Tab title="List" id='listTab'>
 			<Require src='list'></Require>
 		</Tab>
 	</TabGroup>

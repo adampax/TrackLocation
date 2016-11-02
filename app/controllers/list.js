@@ -12,3 +12,12 @@ function doTransform(model) {
 }
 
 locations.fetch();
+
+
+//open window on click
+function openSettings(){
+	var settingsWindow = Alloy.createController('settings').getView();
+	
+	settingsWindow.open();
+}
+	

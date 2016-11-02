@@ -12,3 +12,10 @@
 
 
 Alloy.Collections.locations = Alloy.createCollection('location');
+
+
+Alloy.theme = {
+	barColor: '#0076FF',
+	navTintColor: '#ffffff',
+	tintColor:'#0076FF' 
+}; 

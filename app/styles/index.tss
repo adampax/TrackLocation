@@ -1,5 +1,15 @@
-"Window": {
-	backgroundColor: "#fff"
+'TabGroup': {
+	tintColor:''
+}
+
+'#mapTab': {
+	icon:'images/tabgroup/722-location-pin.png',
+	activeIcon: 'images/tabgroup/722-location-pin-selected.png'
+},
+
+'#listTab': {
+	icon:'images/tabgroup/887-notepad.png',
+	activeIcon: 'images/tabgroup/887-notepad-selected.png'
 }
 
 "Label": {

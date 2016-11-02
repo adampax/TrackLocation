@@ -26,6 +26,21 @@ overrode the settings with other TSS, XML, or JS settings:
 */
 
 
-'Window': {
-	backgroundColor: '#fff' // white background instead of default transparent or black
+'Window':{
+	backgroundColor: '#ffffff',
+	translucent: false
+},
+
+'Window[platform=ios]': {
+	barColor: Alloy.theme.barColor,
+	tintColor: Alloy.theme.navTintColor,
+	navTintColor:Alloy.theme.navTintColor,
+	titleAttributes: {
+		color:Alloy.theme.navTintColor,
+		font: {
+			fontWeight: 'normal',
+			fontSize: 18
+		}
+	},
+	statusBarStyle: Ti.UI.iOS.StatusBar.LIGHT_CONTENT
 }
