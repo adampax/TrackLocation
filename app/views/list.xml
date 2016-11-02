@@ -1,5 +1,8 @@
 <Alloy>
 	<Window title="List">
+	<RightNavButton platform='ios'>
+		<Button titleid='settings' image='/images/settings/740-gear-toolbar.png' onClick='openSettings' />
+	</RightNavButton>		
 		<ListView id="listview" defaultItemTemplate="locations">
 			<Templates>
 				<ItemTemplate name="locations" height="70">

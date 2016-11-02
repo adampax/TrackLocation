@@ -1,4 +1,16 @@
 <Alloy>
-	<Window>
-	</Window>
+	<NavigationWindow id='win'>
+		<Window title='Settings'>
+			<ActionBar platform='android' titleid='settings' onHomeIconItemSelected='closeWindow' displayHomeAsUp='true' />
+			<RightNavButton platform='ios'>
+				<Button id='done' title='Close' onClick='closeWindow' />
+			</RightNavButton>
+			<TableView>
+				<TableViewSection headerTitle="About">
+					<TableViewRow class='tableRow hasChild' title='Hello' />
+				</TableViewSection>
+				<TableViewSection id='version' platform='ios' />
+			</TableView>
+		</Window>
+	</NavigationWindow>
 </Alloy>

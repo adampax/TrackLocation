@@ -1,7 +1,8 @@
 <Alloy>
 	<Window title='Map'>
 		<View id="mapview" module="ti.map" />
-		
-		<RightNavButton id="settingsButton" onClick="openSettings" />
+	<RightNavButton platform='ios'>
+		<Button titleid='settings' image='/images/settings/740-gear-toolbar.png' onClick='openSettings' />
+	</RightNavButton>
 	</Window>
 </Alloy>
