@@ -1,6 +1,8 @@
 var args = arguments[0] || {};
 var Map = require('ti.map');
 
+var ws = require('socket');
+ws.init();
 
 //open window on click
 function openSettings(){

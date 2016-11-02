@@ -54,6 +54,7 @@
     <modules>
         <module platform="iphone">ti.map</module>
         <module platform="android">ti.map</module>
+        <module platform="iphone">net.iamyellow.tiws</module>
     </modules>
     <deployment-targets>
         <target device="android">false</target>
