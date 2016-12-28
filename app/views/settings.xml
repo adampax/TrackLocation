@@ -8,6 +8,10 @@
 			<TableView>
 				<TableViewSection headerTitle="About">
 					<TableViewRow class='tableRow hasChild' title='Hello' />
+					<TableViewRow class='tableRow'>
+						<Label text='Background Tracking' class='title' />
+						<Switch id='backgroundTracking' />
+					</TableViewRow>
 				</TableViewSection>
 				<TableViewSection id='version' platform='ios' />
 			</TableView>

@@ -1,8 +1,8 @@
-#appname: TrackLocation
-#publisher: adam
-#url: http://polancomedia.com
-#image: appicon.png
-#appid: com.polancomedia.tracklocation
-#desc: undefined
-#type: mobile
-#guid: b4c975c7-71de-4615-9444-b187f22de1cf
+#appname:TrackLocation
+#publisher:adam
+#url:http://polancomedia.com
+#image:appicon.png
+#appid:com.polancomedia.tracklocation
+#desc:Simple app to demo iOS significant Location change tracking
+#type:mobile
+#guid:b4c975c7-71de-4615-9444-b187f22de1cf

@@ -1,4 +1,11 @@
+'.title': {
+	font:{
+		fontSize:19
+	},
+	left:14,
+	height:50
+}
 
-".container" : {
-  
+'Switch': {
+	right:10
 }

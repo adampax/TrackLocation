@@ -2,7 +2,6 @@ var args = arguments[0] || {};
 var Map = require('ti.map');
 
 var ws = require('socket');
-ws.init();
 
 //open window on click
 function openSettings(){
@@ -20,9 +19,11 @@ require('geo').getLocation(function(e) {
 		latitudeDelta : 0.05,
 		longitudeDelta : 0.05
 	});
+	
+	require('geo').startGeo(save);
 });
 
-require('geo').startGeo(save);
+
 
 var locations = Alloy.Collections.locations;
 
@@ -62,19 +63,47 @@ function addToMap(collection) {
 }
 
 function save(e) {
-	$.mapview.addAnnotation(Map.createAnnotation({
+	var obj = {
 		latitude : e.latitude,
 		longitude : e.longitude,
-		pincolor : Map.ANNOTATION_RED
-	}));
+		time : new Date().toISOString(),
+		id: Ti.Platform.id
+	};
+	 // $.mapview.addAnnotation(Map.createAnnotation({
+		 // latitude : e.latitude,
+		 // longitude : e.longitude,
+		 // pincolor : Map.ANNOTATION_RED
+	 // }));
 
-	var model = Alloy.createModel('location', {
-		latitude : e.latitude,
-		longitude : e.longitude,
-		time : new Date().toISOString()
-	});
-
-	Alloy.Collections.locations.add(model);
-
-	model.save();
+	// var model = Alloy.createModel('location', obj);
+// 
+	// Alloy.Collections.locations.add(model);
+// 
+	// model.save();
+	
+	ws.send(obj);
 }
+
+var pins = {};
+
+function updateOtherLocations(obj){
+	console.log('msg', obj);
+	if(pins[obj.id]){
+		console.log('move');
+		pins[obj.id].latitude = obj.latitude;
+		pins[obj.id].longitude = obj.longitude; 
+	} else {
+		//create a new location
+		console.log('create pin');
+		pins[obj.id] = Map.createAnnotation({
+			latitude : obj.latitude,
+			longitude : obj.longitude,
+			pincolor : Map.ANNOTATION_PURPLE,
+			draggable: true
+		});
+		$.mapview.addAnnotation(pins[obj.id]);
+	}
+}
+
+ws.init({onMessage: updateOtherLocations});
+

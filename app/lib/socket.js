@@ -1,9 +1,21 @@
 var WS = require('net.iamyellow.tiws').createWS();
 
 //var uri = 'ws://<IP:URL>:<PORT>';
-var uri = 'http://192.168.0.109:3000';
 
-exports.init = function() {
+var uri = 'ws://mysterious-garden-76596.herokuapp.com';
+
+var uri = 'http://localhost:3005';
+
+//placeholder for messasge callback
+exports.onMessage = function(){};
+
+exports.init = function(obj) {
+
+	if(_.isFunction(obj.onMessage)){
+		exports.onMessage = obj.onMessage;
+	} else {
+		throw 'onMessage must be function.';
+	}
 
 	WS.addEventListener('open', function() {
 		Ti.API.debug('websocket opened');
@@ -18,7 +30,7 @@ exports.init = function() {
 	});
 
 	WS.addEventListener('message', function(ev) {
-		Ti.API.log(ev);
+		exports.onMessage(JSON.parse(ev.data));
 	});
 
 	WS.open(uri);
@@ -26,5 +38,12 @@ exports.init = function() {
 };
 
 exports.send = function(msg) {
-	WS.send(msg);
+	WS.send(JSON.stringify(msg));
 };
+
+
+
+//constants for message actions
+exports.CREATE = 'create';
+exports.UPDATE = 'update';
+exports.DELETE = 'delete';
